@@ -23,7 +23,7 @@ GROQ_API_KEY = load_return_env(["GROQ_API_KEY"])["GROQ_API_KEY"]
 
 # Set page title and favicon
 st.set_page_config(
-    page_title="AI Book Generator",
+    page_title="Book GPT",
     page_icon="📚",
     layout="wide"
 )
@@ -92,7 +92,7 @@ ensure_states(states)
 # 3: Define Streamlit page structure and functionality
 st.write(
     """
-# AI Book Generator: Write full books using fastest LLMs on Groq.
+# Book GPT: Write full books using fastest LLMs on Groq
 """
 )
 

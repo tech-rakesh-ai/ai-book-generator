@@ -21,7 +21,7 @@ from book_gpt.ui import Book, load_return_env, ensure_states
 
 # Set page title and favicon
 st.set_page_config(
-    page_title="Advance AI Book Generator",
+    page_title="Book GPT Advanced",
     page_icon="📚",
     layout="wide"
 )
@@ -49,7 +49,7 @@ ensure_states(states)
 # 3: Define Streamlit page structure and functionality
 st.write(
     """
-# AI Books Generator: Write full books using fastest LLMs on Groq
+# Book GPT Advanced: Write full books using fastest LLMs on Groq
 """
 )
 

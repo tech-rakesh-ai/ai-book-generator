@@ -43,7 +43,7 @@ def render_advanced_groq_form(on_submit, button_disabled=False, button_text="Gen
         st.markdown("""        
         ## 🚀 About Platform
         
-        > *Transforming ideas into comprehensive books using state-of-the-art AI*
+        > *Book GPT: Transform your ideas into comprehensive books using state-of-the-art AI*
         
         ### 🌟 Powered By
         - 🧩 LLaMA 3.3 70B Model

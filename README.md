@@ -1,4 +1,4 @@
-# 📚 AI Book Generator
+# 📚 Book GPT (AI Book Generator)
 
 > Transform your ideas into comprehensive books using state-of-the-art AI powered by Groq's ultra-fast infrastructure.
 
@@ -25,7 +25,7 @@
 1. Clone the repository:
 
 ```bash 
-git clone https://github.com/tech-rakesh-ai/ai-book-generator.git
+git clone https://github.com/tech-rakesh-ai/book-gpt.git
 ```
 
 2. Install dependencies:
@@ -48,7 +48,7 @@ streamlit run main.py
 
 ## 📚 Documentation
 
-For more detailed information on how to use the AI Book Generator, please refer to the [Documentation](https://github.com/tech-rakesh-ai/ai-book-generator/blob/main/README.md).
+For more detailed information on how to use the AI Book Generator, please refer to the [Documentation](https://github.com/tech-rakesh-ai/book-gpt/blob/main/README.md).
 
 ## 🛠️ Features in Detail
 
@@ -82,8 +82,8 @@ For more detailed information on how to use the AI Book Generator, please refer 
 Build and run using Docker:
 
 ```bash
-docker build -t ai-book-generator .
-docker run -p 8000:8000 ai-book-generator
+docker build -t book-gpt .
+docker run -p 8000:8000 book-gpt
 ```
 
 ## 🔧 Technical Architecture
