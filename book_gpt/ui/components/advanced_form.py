@@ -37,6 +37,51 @@ def render_advanced_groq_form(on_submit, button_disabled=False, button_text="Gen
         st.markdown("\n")
         st.image("assets/logo/powered-by-groq.svg", width=150)
 
+        st.markdown("---")  # Divider for better section separation
+        
+        # Enhanced developer information with more attractive styling
+        st.markdown("""        
+        ## 🚀 About Platform
+        
+        > *Transforming ideas into comprehensive books using state-of-the-art AI*
+        
+        ### 🌟 Powered By
+        - 🧩 LLaMA 3.3 70B Model
+        - ⚡ Groq's Ultra-fast Infrastructure
+        
+        ### 🎯 Key Features
+        - 📚 Complete Book Generation
+        - ⚡ Lightning-fast Processing
+        - 🎨 Customizable Content
+        - 📑 Multiple Export Formats
+        - 🔧 Advanced Configuration
+        - 🎯 Topic-focused Structure
+        
+        ---
+        ### 💡 Tips
+        Use advanced mode for more control over your book generation!
+        
+        ---
+        
+        # 👨‍💻 About Developer
+        
+        ## ✨ Rakesh Kumar
+        Senior Software Engineer & AI Enthusiast
+        
+        ### 🛠️ Expertise
+        - 🤖 Prompt Engineering
+        - 🧠 GenAI Development
+        - 📊 NLP & Machine Learning
+        - 🔄 RESTful APIs
+        - 💬 Chatbot Architecture
+        
+        [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/tech-rakesh-ai/) 
+        [![GitHub](https://img.shields.io/badge/GitHub-Follow-black)](https://github.com/tech-rakesh-ai/)
+        
+        ---
+        
+        """)
+
     with st.form("groqform"):
         st.info(
             "You are using advanced mode with additional features. Visit [here](/) to use the streamlined version."

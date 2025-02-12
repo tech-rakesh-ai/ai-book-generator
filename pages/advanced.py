@@ -3,24 +3,32 @@ import streamlit as st
 from groq import Groq
 import json
 
-from ai_book_generator.agents import (
+from book_gpt.agents import (
     generate_section,
     generate_book_structure,
     generate_book_title,
 )
-from ai_book_generator.inference import GenerationStatistics
-from ai_book_generator.tools import create_markdown_file, create_pdf_file
-from ai_book_generator.ui.components import (
+from book_gpt.inference import GenerationStatistics
+from book_gpt.tools import create_markdown_file, create_pdf_file
+from book_gpt.ui.components import (
     render_groq_form,
     render_advanced_groq_form,
     display_statistics,
     render_download_buttons,
 )
-from ai_book_generator.ui import Book, load_return_env, ensure_states
+from book_gpt.ui import Book, load_return_env, ensure_states
 
+
+# Set page title and favicon
+st.set_page_config(
+    page_title="Advance AI Book Generator",
+    page_icon="📚",
+    layout="wide"
+)
 
 # 2: Initialize env variables and session states
 GROQ_API_KEY = load_return_env(["GROQ_API_KEY"])["GROQ_API_KEY"]
+
 
 states = {
     "api_key": GROQ_API_KEY,
@@ -41,7 +49,7 @@ ensure_states(states)
 # 3: Define Streamlit page structure and functionality
 st.write(
     """
-# AI Books Generator: Write full books using llama3.3 70b on Groq
+# AI Books Generator: Write full books using fastest LLMs on Groq
 """
 )
 

@@ -3,23 +3,75 @@ import streamlit as st
 from groq import Groq
 import json
 
-from ai_book_generator.agents import (
+from book_gpt.agents import (
     generate_section,
     generate_book_structure,
     generate_book_title,
 )
-from ai_book_generator.inference import GenerationStatistics
-from ai_book_generator.tools import create_markdown_file, create_pdf_file
-from ai_book_generator.ui.components import (
+from book_gpt.inference import GenerationStatistics
+from book_gpt.tools import create_markdown_file, create_pdf_file
+from book_gpt.ui.components import (
     render_groq_form,
     display_statistics,
     render_download_buttons,
 )
-from ai_book_generator.ui import Book, load_return_env, ensure_states
+from book_gpt.ui import Book, load_return_env, ensure_states
 
 
 # 2: Initialize env variables and session states
 GROQ_API_KEY = load_return_env(["GROQ_API_KEY"])["GROQ_API_KEY"]
+
+# Set page title and favicon
+st.set_page_config(
+    page_title="AI Book Generator",
+    page_icon="📚",
+    layout="wide"
+)
+
+# Add sidebar with developer information
+with st.sidebar:
+    st.markdown("""
+                    
+    ## 🚀 About Platform
+    
+    > *Transforming ideas into comprehensive books using state-of-the-art AI*
+    
+    ### 🌟 Powered By
+    - 🧩 LLaMA 3.3 70B Model
+    - ⚡ Groq's Ultra-fast Infrastructure
+    
+    ### 🎯 Key Features
+    - 📚 Complete Book Generation
+    - ⚡ Lightning-fast Processing
+    - 🎨 Customizable Content
+    - 📑 Multiple Export Formats
+    - 🔧 Advanced Configuration
+    - 🎯 Topic-focused Structure
+    
+    ---
+    ### 💡 Tips
+    Try the advanced mode for more control over your book generation!
+    
+    ---
+    
+     # 👨‍💻 About Developer
+    
+    ## ✨ Rakesh Kumar
+    Senior Software Engineer & AI Enthusiast
+    
+    ### 🛠️ Expertise
+    - 🤖 Prompt Engineering
+    - 🧠 GenAI Development
+    - 📊 NLP & Machine Learning
+    - 🔄 RESTful APIs
+    - 💬 Chatbot Architecture
+    
+    [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/tech-rakesh-ai/) 
+    [![GitHub](https://img.shields.io/badge/GitHub-Follow-black)](https://github.com/tech-rakesh-ai/)
+    
+    ---
+    
+    """)
 
 states = {
     "api_key": GROQ_API_KEY,
@@ -40,7 +92,7 @@ ensure_states(states)
 # 3: Define Streamlit page structure and functionality
 st.write(
     """
-# AI Book Generator: Write full books using llama3.3 70b on Groq
+# AI Book Generator: Write full books using fastest LLMs on Groq.
 """
 )
 
