@@ -1,4 +1,6 @@
-# In this AI Book Generator We have implemented   Natural Language Processing and Data Structures and Algorithms
+# AI Book Generator (launch) 
+
+## Some Example/Demo
 
 ## The Basics of Large Language Models
 
