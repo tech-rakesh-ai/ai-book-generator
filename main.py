@@ -32,8 +32,12 @@ st.set_page_config(
 with st.sidebar:
     st.markdown("""
                     
-    ## 🚀 About Platform
+    ## 🚀 About Platform 
+    """)
+    # Add logo image
+    st.image("assets/logo/book_gpt_logo.png", width=150)
     
+    st.markdown("""
     > *Transforming ideas into comprehensive books using state-of-the-art AI*
     
     ### 🌟 Powered By
@@ -57,7 +61,7 @@ with st.sidebar:
      # 👨‍💻 About Developer
     
     ## ✨ Rakesh Kumar
-    Senior Software Engineer & AI Enthusiast
+    Software Engineer & AI Enthusiast
     
     ### 🛠️ Expertise
     - 🤖 Prompt Engineering
@@ -72,6 +76,9 @@ with st.sidebar:
     ---
     
     """)
+    st.markdown("\n")
+    st.image("assets/logo/powered-by-groq.svg", width=150)
+
 
 states = {
     "api_key": GROQ_API_KEY,
@@ -104,7 +111,6 @@ with col1:
 
 with col2:
     st.image("assets/logo/powered-by-groq.svg", width=150)
-
 
 def disable():
     st.session_state.button_disabled = True

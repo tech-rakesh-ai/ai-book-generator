@@ -43,6 +43,10 @@ def render_advanced_groq_form(on_submit, button_disabled=False, button_text="Gen
         st.markdown("""        
         ## 🚀 About Platform
         
+        """)
+        st.image("assets/logo/book_gpt_logo.png", width=150)
+        st.markdown("""
+        
         > *Book GPT: Transform your ideas into comprehensive books using state-of-the-art AI*
         
         ### 🌟 Powered By
@@ -66,7 +70,7 @@ def render_advanced_groq_form(on_submit, button_disabled=False, button_text="Gen
         # 👨‍💻 About Developer
         
         ## ✨ Rakesh Kumar
-        Senior Software Engineer & AI Enthusiast
+        Software Engineer & AI Enthusiast
         
         ### 🛠️ Expertise
         - 🤖 Prompt Engineering
@@ -89,8 +93,11 @@ def render_advanced_groq_form(on_submit, button_disabled=False, button_text="Gen
 
         if not st.session_state.get("api_key"):
             st.subheader("API Key")
+            st.markdown(
+                "Don't have a Groq API key? [Create one here](https://console.groq.com/keys) 🔑"
+            )
             groq_input_key = st.text_input(
-                "Enter your Groq API Key (gsk_yA...):", "", type="password"
+                "Enter your Groq API Keyy (gsk_yA...):", "", type="password"
             )
         else:
             groq_input_key = None

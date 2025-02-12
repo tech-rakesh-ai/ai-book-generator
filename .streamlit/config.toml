@@ -1,12 +1,5 @@
 [client]
 showSidebarNavigation = false
-toolbarMode = "minimal"
 
 [theme]
 base = "dark"
-
-[browser]
-gatherUsageStats = false
-
-[global]
-developmentMode = false
