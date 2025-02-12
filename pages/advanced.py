@@ -3,20 +3,20 @@ import streamlit as st
 from groq import Groq
 import json
 
-from infinite_bookshelf.agents import (
+from ai_book_generator.agents import (
     generate_section,
     generate_book_structure,
     generate_book_title,
 )
-from infinite_bookshelf.inference import GenerationStatistics
-from infinite_bookshelf.tools import create_markdown_file, create_pdf_file
-from infinite_bookshelf.ui.components import (
+from ai_book_generator.inference import GenerationStatistics
+from ai_book_generator.tools import create_markdown_file, create_pdf_file
+from ai_book_generator.ui.components import (
     render_groq_form,
     render_advanced_groq_form,
     display_statistics,
     render_download_buttons,
 )
-from infinite_bookshelf.ui import Book, load_return_env, ensure_states
+from ai_book_generator.ui import Book, load_return_env, ensure_states
 
 
 # 2: Initialize env variables and session states
@@ -41,7 +41,7 @@ ensure_states(states)
 # 3: Define Streamlit page structure and functionality
 st.write(
     """
-# Infinite Bookshelf: Write full books using llama3.3 70b on Groq
+# AI Books Generator: Write full books using llama3.3 70b on Groq
 """
 )
 
