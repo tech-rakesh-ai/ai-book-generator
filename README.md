@@ -1,4 +1,4 @@
-# AI Book Generator (launch) 
+# AI Book Generator 
 
 ## Some Example/Demo
 
